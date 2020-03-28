@@ -3,14 +3,14 @@
 2. Challengeuri - Lupta cu furnicile/Lupta cu pirati melee, Vanatoare de rate/Lupta cu pirati ranged, Stealing the honey/Lupta cu adversarii heavy(folosind barca).Dupa challengeuri
 o sa ai optiunea de a iti cauta arma preferata pe nava.
 2.1 - Branchul pozitiv - 0 sau 1 din challengeuri - Nu devii capitan, esti abandonat pe o insula pustie.
-3.1 - Te intalnesti cu Whitebeard, ca sa te recruteze iti da un challenge. Challengeul consta in gasirea unei comori pe insula pe care ai fost abandonat.
-3.1.1 - Reusesti challengeul, Whitebeard te ia sub aripa lui. *Ending*
+3.1 - Te intalnesti cu Blackbeard, ca sa te recruteze iti da un challenge. Challengeul consta in gasirea unei comori pe insula pe care ai fost abandonat.
+3.1.1 - Reusesti challengeul, Blackbeard te ia sub aripa lui. *Ending*
 
-3.1.2 - Nu reusesti challengeul.Din disperare sa nu mori, il ataci pe Whitebeard.
-3.1.2.1 - Il omori pe Whitebeard pentru a supravietui.Devii capitan al navei lui.Ending bun. *Ending*
+3.1.2 - Nu reusesti challengeul.Din disperare sa nu mori, il ataci pe Blackbeard
+3.1.2.1 - Il omori pe Blackbeard pentru a supravietui.Devii capitan al navei lui.Ending bun. *Ending*
 3.1.2.2 - Daca nu reusesti sa il omori, te executa. *Ending*
 
-2.2 - Branchul negativ - 2 sau 3 din challengeuri - Devii capitan, la un moment dat in viitor, nava ta este atacata si tot echipajul este capturat de Whitebeard.
+2.2 - Branchul negativ - 2 sau 3 din challengeuri - Devii capitan, la un moment dat in viitor, nava ta este atacata si tot echipajul este capturat de Blackbeard
 3.2 - Datorita faptului ca esti capitan, Blackbeard iti ofera o sansa sa traiesti. Challengeul consta in gasirea unei chei, sub apa, in interiorul unei epave. 
 3.2.1 - Gasesti cheia, completezi challengeul si te lasa in viata si te lasa sa cobori la cel mai apropiat port.
 3.2.1.1 - Incerci sa furi comoara - bataie doar cu echipajul in timpul noptii.
@@ -18,5 +18,5 @@ o sa ai optiunea de a iti cauta arma preferata pe nava.
 3.2.1.1.2 - Nu reusesti, esti executat. *Ending*
 3.2.1.2 - Nu furi comoara, ending neutru. Traiesti viata ca un cizmar. *Ending*
 3.2.2 - Nu reusesti sa gasesti cheia.
-3.2.2.1 - Decizi ca ai putea sa il confrunti pe Blackbeard. Dar in timp ce te urci pe scara pentru a ajunge pe nava, Blackbeard te intreaba unde e cheia, ii spui ca nu ai reusit sa o gasesti si esti executat instant.*Ending*
-3.2.2.2 - Decizi sa fugi cu nava de salvare pentru a scapa de furia lui Whitebeard. *Ending*
+3.2.2.1 - Decizi ca ai putea sa il confrunti pe Blackbeard Dar in timp ce te urci pe scara pentru a ajunge pe nava, Blackbeard te intreaba unde e cheia, ii spui ca nu ai reusit sa o gasesti si esti executat instant.*Ending*
+3.2.2.2 - Decizi sa fugi cu nava de salvare pentru a scapa de furia lui Blackbeard. *Ending*
