@@ -1,0 +1,89 @@
+1. Intro : Cinematic: You wake up on the ship, a crewmate tells you about Blackbeard's latest conquer, he attacked Charlestown with his fleet and conquered it. He now controls two cities, Nassau and 
+the previous, making him the greatest pirate of all times.(?)He also tells you that he would like to take Blackbeard's head and all his treasure and asks if you would to the same. He also tells you that 
+the monkey cook and the parrot first mate are searching for you.
+Assets needed: 2xCinematic: One with Pirate Ship. One with Blackbeard.
+
+
+2.Cinematic. You go to either the parrot or the monkey, and you start talking to them: The parrot tells you that in order to buy equipment for the next raid on traders ships,
+you need to buy more equipment and for that you need money. He sends you to a close island in order to kill the legendary golden ants and collect their antennas which are worth hundreds of gold coins.
+You take a fishing boat and sail to the island, once on the island you prepare yourself when you realise what you're about to do, the ants you see are not violent, they are families, tens of kid ants
+are around playing, one of them comes to you and asks who are you and if you want to play. Decision screen(split the screen into two images, both blurred, and when mouse(or keyboard pressed to one of
+them, zoom in and highlight that choice - (Slaughter them) or (Tell them about your task and ask them to move their colony for their safety).
+The monkey tells you that the ship needs more delicious food,he tells you about a close by island which has a wonderful lake, full of delicious ducks.You take a fishing boat and sail to the island, 
+once on the island you prepare your gun when a crocodile appears and asks what are up to. You tell him that you want to hunt some ducks for your ship and he tells you that the ducks are the only food he
+and his family can find and if you were to take their ducks you would have to kill them first as they would die without the food anyways.Again a decision screen - (Fight the crocodiles and hunt the ducks)
+or (Spare the crocodiles and go empty handed to the cook).
+Assets needed: 4xCinematic: One with cook monkey. One with parrot firstmate. One with golden ants. One with crocodiles and ducks.
+
+
+3.Depending on the choices you will find yourself in of the scenarios:
+a) You chose to kill the ants, you will fight into an arena which will spawn various waves of melee fighter ants. You have to kill all the waves. If you fail, you get to try again until you manage to pass.
+After you kill them your melee sword will be upgraded and you will get a special ability(Whirlwind).One of the challenges will also be completed(this will matter in future).Again a small dialogue with the 
+parrot thanking you with the same cinematic as above.
+b) You choose not to kill the ants and tell them that people are seeking their antennas.They move their colony to a deeper more hidden region of the island and their captain thanks you by giving two/three 
+ant guardians to help you in the future. They will hide in your pocket for later use(special ability for latter challenges). When you arrive on the ship, the parrot is angry and decides you should be punish
+according to pirate law for insubordination.You are placed in an arena map to fight with melee pirates for 1 minute you have to survive various waves of enemies.Again you try until you win.
+c) You choose to fight the crocodiles. You are on a small boat on the lake and you have to kill ducks with your gun and collect their bodies while the crocodile waves spawn and try to attack you.After you finish
+your gun gets upgraded and you get your special ability(Bullet Barrage).The monkey is happy- small dialogue.
+d) You choose to avoid stealing the crocodiles' food. To thank you, they offer you for not stealing their food, they offer you a special crocodile whistle that when used, crocodiles from around you will help you.
+Instead you hunt for some birds and when you arrive on the ship, the monkey is furious because you are trying to decieve him.He send the gunners of the ship totake care of you. Small arena, same as above, survival for 1 min.
+Assets needed: 4xEnemies: Ant. Melee Pirate. Ranged Pirate. Crocodile.
+3xMaps: Ant Island. Ship. Ducks Lake.
+MainChar: Melee sword(done). Ranged gun. Ranged gun sailing.
+Utiliy: Duck.
+
+4.The captain calls you into their cabin.He is giving you a mission to acquire a mysterious legendary honey that he wants to use for his rum. He also tells you that you have to do it without using a weapon, when 
+you ask why, he tells you that you have to prove yourself to him that you can do whatever you can for him even in the toughest situations. You sail to the island where this honey is rumored to be found and you 
+encounter the bees that make the honey. They offer to sell you the honey but you don't have any money. They tell you that they cant just give it to you as their whole business rest on the honey and that honey is
+really difficult to make and even just by giving away a little bit of it, their whole business would collapse and they would all die.Decision screen - (Kill the bees and steal their honey) or (Spare the bees and
+disappoint the captain).
+First choice sends you to a minigame, where you are dodging and hitting the bees with your boat because you are empty handed and the goal is to collect a certain number of honey combs.
+The other path is by refusing to kill the bess, in exchange they offer you three guardian bees that you will be able to use in future. But you will face the wrath of the captain, he send the biggest guys on the
+ship to kill you and you don't have a weapon so you use your boat to push them in different traps around the ship or, out of the ship.
+Assets needed: 2xCinematic: Bees. Captain.
+2xEnemies : Big Pirate. Bee.
+MainChar: Carrying Ship.
+1xMap: Bee Island
+Utility: Honey Comb
+
+5. Cinematic part, based on the decisions made, you are either abandoned on an island or you get on the good side of the captain and time skip forwards, you become the captain.For the first path, after a few weeks on the
+abandoned island, a ship docks there, it's the infamous Queen Anne's Revenge, Blackbeard's main ship. His crew finds you and take you to him, he listens to your story and offers you a chance of survival. In case you did 
+the previous challenges without dying a lot, he will acknowledge your existence as one of the best(swordsman, gunners, brawlers) on the seven seas. Find the hidden chest on this island. You will choose your main weapon 
+based on the previous challenges. Minigame: you have to dig through various sand dunes to find the treasure chest while skeletons attack you. You are able to use the guardian ants to send them to dig in your place while you deal 
+with skeletons and/or the guardian bees to fight with skeletons.
+On the other story branch, while navigating, your ship is attacked and easily captured by the Queen Anne's Revenge, your ship is sent to the bottom of the ocean and you and a few of your crewmates who are still alive have been
+captured. After spending some time in your cells. Blackbeard himself comes to talk to you, he knows that you were the captain (and in case you didn't die too much in the challenges) he acknowledges you as one of the best(swordsmen,
+gunners,brawlers). He then gives you a chance for you and your crew to be spared. He gives you your favourite weapon. You have to go to an abandoned shipwreck found near an island and find a key to a treasure chest that he
+has found on an abandoned island.Minigame: Find the treasure key hidden in under various barrels on the shipwreck while sharks attack you. You can use the crocodile whistle and/or bee guardians to fight with the sharks 
+while you search for the key.
+Assets needed: 6 or 4 x Cinematic : Blackbeard on the abandoned island. Blackbeard in your dark cell. Shipwreck. Sand dunes and skeletons. (Optional : abandoned island and you as captain)
+2xMap: Shipwreck. Abandoned Island.
+2xEnemies: Shark.Skeleton.
+Utility: Barrel.Chest.Dune.Key.
+
+6. Based on previous choices:
+a)You fail to find the chest ( by dying too much). Blackbeard sends his men who manage to do it and tells you that he will abandon you. As fear begins to destroy you, you take all your courage and use it to attack Blackbeard.
+Which results in a boss fight. If you win, you then take the remaining crew and his ship and become the next Blackbeard yourself,take control of his cities, ships and every single treasure he owned. If you lose, you are then
+executed by being shot in the head.
+b) If you find the chest, Blackbeard rewards you by offering you a place in his crew. You then become close to him and eventually in a few months you remain alone with him in a room while you are playing dices. You now have the
+opportunity to kill him as you've waited for so much time, you have the chance to take the head of the legendary Blackbeard.A small monologue wil be given if you choose in the beginning that you would like to kill him. Other 
+thoughts such as that he saved you from dying and treated you like his child come into mind to make the choice more difficult.
+c) If you find the key, Blackbeard offers you and your crew freedom. On the night his ship arrives in a port, you are given the choice of stealing the treasure, if you try to steal it, you are again facing a boss fight with
+Blackbeard, but this time , before the fight you have to kill a few waves of his men.If you win, you take his treasure and kill Blackbeard and then escape the rest of his crew, becoming the infamous Pirate Kingslayer, one 
+of the greatest pirates around. If you lose, you and your crew are all sold as slaves.
+d) If you don't find the key, you have the option of facing Blackbeard, if you try to kill him, he will suddenly shoot you in the head as you are trying to get back on the ship. If you decide to run, your crew gets slaughtered
+and you live the rest of your short life poor.
+Assets needed:
+4xCinematic : Kill Blackbeard. Playing dices with Blackbeard. Blackbeard ship in the port during night. You trying to climb the ladder to the ship
+1xMap : Night Blackbeard ship.
+4xEnemies: Blackbeard. Blackbeard melee pirate. Blackbeard ranged pirate. Blackbeard brawler pirate.
+
+7.Endings: a) You become Blackbeard.
+b) You are executed by being shot in the head.
+c) You become his most trusted and eventually his first mate and The Greatest Swordsman/Brawler/Gunner Of The Seven Seas.
+d) You assasinate him while playing dices becoming the infamous assassin that ended Blackbeard's Pirate King reign becoming the infamous Pirate Assassin.
+e) You kill him and part of his crew during the night, steal his treasure and burn his ship becoming the infamous Pirate Kingslayer.
+f) You and your crew are sold as slaves.
+g) You are suddenly shot in the head.
+h) You escape, knowing that you killed your own men by abandoning them.You live the rest of your short life poor.
+Assets: Each ending has a cinematic  (8).
