@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &302379006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316415600291374901, guid: 11f8767c7bea72a4697ecb3c99bdc8a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 995200407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &302379012 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1316415600291374280, guid: 11f8767c7bea72a4697ecb3c99bdc8a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 995200407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &302379014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302379006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc010b0263a3144d86c432fbc7f0a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 603958344}
+  enemyGraphics: {fileID: 302379012}
+  speed: 100
+  nextWayPointDistance: 3
+  side: 0
+--- !u!114 &302379015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302379006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
 --- !u!1 &362450042
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +274,7 @@ GameObject:
   - component: {fileID: 475909194}
   - component: {fileID: 475909193}
   - component: {fileID: 475909192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: obstacle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +294,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2111876}
+  m_Offset: {x: 0, y: -0.0005469322}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -248,7 +305,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4, y: 0.8076248}
+  m_Size: {x: 1.4, y: 1.2289062}
   m_EdgeRadius: 0
 --- !u!50 &475909193
 Rigidbody2D:
@@ -564,6 +621,11 @@ PrefabInstance:
       propertyPath: playerPosition
       value: 
       objectReference: {fileID: 603958344}
+    - target: {fileID: 2382117639076109058, guid: 11f8767c7bea72a4697ecb3c99bdc8a8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4791314809176456189, guid: 11f8767c7bea72a4697ecb3c99bdc8a8,
         type: 3}
       propertyPath: playerPosition
@@ -571,6 +633,92 @@ PrefabInstance:
       objectReference: {fileID: 603958344}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11f8767c7bea72a4697ecb3c99bdc8a8, type: 3}
+--- !u!1 &1342058912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1342058914}
+  - component: {fileID: 1342058913}
+  m_Layer: 0
+  m_Name: A* Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1342058913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342058912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAAAQIeyXWdNiVQIAAPkEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMziVjg/NBb60hpIeETGgnF1+EtcYaZMmjj/CR4b93JdvYodMT4r23u29XK38SLk0NuVV6qTl7VgzI9xHxZ/Jt1JNPcKBbJdf8BJ3mnTNbehENmjdquUI89mFGVWA1z3/IrfDiCEEneaF0tWBbSJWxBuGCCgNIaWV9tEToc0QO+DOe+ZAjnib3/nTC0ywanfGYg7Sge2kn7GSNyslc0KoG5i334ji5SVr9w810EqQSG2pV0U1850soIbhpDRF7rEPDKa2Nw3ZQwDjFBoML328JfFtab3YYvCoKA7Z1pulxzjXOqclKfqpmeBU1u8beBxXO15nc3gVbTdLnf/hxHOhCq+qpqxtHvoYteb57o8ecGjuY7hCefzXu5J6KHd0IeC9BvqilVk4yJK12PtQZmMz7v5fW0hLyXY83Vq9AV///jnwP59D9IRW82oTRJw2wFirMO2wAaLycX2g47IdpUyDqXfwx8Jtuh4vUEo9cG4tU26X09jbKaS8lizAz342zqdISAtyarkFSYY+vmMZeX+EVNyh7xTxS/2Ta4i3XvYSrkAD3+ii6ol7V/nJZplT7ZzDlylnBJfSmPfGCc0qVlM2GDWfSha2dLmg+CNs6zr6uFmH3yTS5pVGesM3dA8TjGdwm02mcM4iBJjNKwu5xiX1S8doYbceDtyb75BL3rPuSjJaa1mHbmab7JT9VajByLgu1zjWAXDUZLsZBYxF8mGzBOA5oDdZyGe6bfGZEqHwHLLskykKni4PVNOuzZKTmH8p6JCNp+HRk5EzOfwFQSwMEFAAACAgAABAh7DC3SZRtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tFKKuYmxiWmiQbJJSpKZRaqhrmWqqYmxsWFySqphaqKJZaJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAABAh7JdZ02JVAgAA+QQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAABAh7DC3SZRtAAAAeAAAAAkAJAAAAAAAAAAAAAAAogIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABaAwAAAAA=
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &1342058914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342058912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.11642717, y: -0.86285067, z: -0.31564823}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1402123644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -637,6 +785,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MeleePirateEnemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316415600291374901, guid: 11f8767c7bea72a4697ecb3c99bdc8a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2382117639076109058, guid: 11f8767c7bea72a4697ecb3c99bdc8a8,
         type: 3}
@@ -736,7 +889,7 @@ GameObject:
   - component: {fileID: 1651187584}
   - component: {fileID: 1651187583}
   - component: {fileID: 1651187582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,7 +909,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.17598915}
+  m_Offset: {x: 0, y: 0.00026142597}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -767,7 +920,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4, y: 0.8780217}
+  m_Size: {x: 1.4, y: 1.2305229}
   m_EdgeRadius: 0
 --- !u!50 &1651187583
 Rigidbody2D:
@@ -922,6 +1075,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeleePirateEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1316415600291374901, guid: 11f8767c7bea72a4697ecb3c99bdc8a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2382117639076109058, guid: 11f8767c7bea72a4697ecb3c99bdc8a8,
         type: 3}
       propertyPath: playerPosition
@@ -1000,6 +1158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MeleePirateEnemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316415600291374901, guid: 11f8767c7bea72a4697ecb3c99bdc8a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2382117639076109058, guid: 11f8767c7bea72a4697ecb3c99bdc8a8,
         type: 3}
