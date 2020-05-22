@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class MeleeEnemyAttack : MonoBehaviour
 {
-    public Rigidbody2D rb;
     public Animator animator;
     public Transform playerPosition;
 
+    private Rigidbody2D rb;
     private Vector2 attackVector;
     private float attackRange = 0.7f;
     private bool attacking = false;
 
+    private float attackSize;
+
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         attackVector = playerPosition.position - transform.position;
+
+        attackSize = 0.5f;
     }
 
     // Update is called once per frame
@@ -41,6 +46,14 @@ public class MeleeEnemyAttack : MonoBehaviour
 
 
         yield return new WaitForSeconds(0.7f);
+
+        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector, attackSize);
+        foreach (Collider2D col in collidersAttacked)
+        {
+            if (col.gameObject.tag == "Player")
+                playerPosition.gameObject.GetComponent<Player>().loseHealth();
+        }
+
         rb.constraints = RigidbodyConstraints2D.None;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 

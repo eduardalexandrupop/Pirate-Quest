@@ -1,22 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator animator;
 
+    public Image attackBar;
+
     private bool attacking;
     private float attackCooldown;
     private bool attackOnCooldown;
+
+    private float attackSize;
 
     // Start is called before the first frame update
     void Start()
     {
         attacking = false;
         attackOnCooldown = false;
-        attackCooldown = 1f;
+        attackCooldown = 0.8f;
+
+        attackSize = 0.3f;
     }
 
     // Update is called once per frame
@@ -55,12 +62,41 @@ public class PlayerAttack : MonoBehaviour
 
 
         yield return new WaitForSeconds(0.2f);
+
+        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector, attackSize);
+
+        foreach (Collider2D col in collidersAttacked)
+        {
+            if (col.gameObject.tag == "Enemy")
+            {
+                col.gameObject.GetComponent<Enemy>().loseHealth();
+                Rigidbody2D rBod = col.gameObject.GetComponent<Rigidbody2D>();
+                rBod.constraints = RigidbodyConstraints2D.None;
+                rBod.constraints = RigidbodyConstraints2D.FreezeRotation;
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(attackVector * 100);
+            }
+        }
+        foreach (Collider2D col in collidersAttacked)
+        {
+            if (col.gameObject.tag == "Enemy")
+            {
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(attackVector * 100);
+            }
+        }
+
         rb.constraints = RigidbodyConstraints2D.None;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         attacking = false;
 
-        yield return new WaitForSeconds(attackCooldown);
+        attackBar.rectTransform.sizeDelta = new Vector2(0, attackBar.rectTransform.sizeDelta.y);
+        float timeProgress = 0f;
+        while (timeProgress < attackCooldown)
+        {
+            attackBar.rectTransform.sizeDelta = new Vector2(60 * timeProgress / attackCooldown, attackBar.rectTransform.sizeDelta.y);
+            yield return new WaitForSeconds(attackCooldown/100);
+            timeProgress += attackCooldown / 100;
+        }
         attackOnCooldown = false;
     }
 
