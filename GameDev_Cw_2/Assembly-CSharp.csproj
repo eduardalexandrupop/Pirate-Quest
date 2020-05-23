@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\MeleeAI.cs" />
      <Compile Include="Assets\Scripts\MeleeEnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\PirateArena1Manager.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />

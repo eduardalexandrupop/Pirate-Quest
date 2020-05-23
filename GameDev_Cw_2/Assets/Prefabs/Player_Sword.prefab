@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 8093389183898042566}
   - component: {fileID: 2505633749210217920}
   - component: {fileID: 1913817861}
-  m_Layer: 0
+  - component: {fileID: 2964564273724613821}
+  m_Layer: 8
   m_Name: Player_Sword
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4937611260470486041}
+  collider: {fileID: 0}
   animator: {fileID: 8093389183898042566}
 --- !u!50 &4937611260470486041
 Rigidbody2D:
@@ -155,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4937611260470486041}
   animator: {fileID: 8093389183898042566}
+  attackBar: {fileID: 0}
 --- !u!58 &1913817861
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +174,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.17}
   serializedVersion: 2
   m_Radius: 0.17
+--- !u!114 &2964564273724613821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937611260470487014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66f5ae1299a3ec4cb4628fc3b9a5dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: []
+  dead: {fileID: 0}

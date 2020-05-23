@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeleeEnemyAttack : MonoBehaviour
 {
     public Animator animator;
-    public Transform playerPosition;
+    public GameObject player;
 
     private Rigidbody2D rb;
     private Vector2 attackVector;
@@ -18,7 +18,7 @@ public class MeleeEnemyAttack : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        attackVector = playerPosition.position - transform.position;
+        attackVector = player.transform.position - transform.position;
 
         attackSize = 0.5f;
     }
@@ -26,7 +26,7 @@ public class MeleeEnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        attackVector = playerPosition.position - transform.position;
+        attackVector = player.transform.position - transform.position;
     }
 
     void FixedUpdate()
@@ -47,11 +47,13 @@ public class MeleeEnemyAttack : MonoBehaviour
 
         yield return new WaitForSeconds(0.7f);
 
-        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector, attackSize);
+        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector*0.5f, attackSize);
         foreach (Collider2D col in collidersAttacked)
         {
             if (col.gameObject.tag == "Player")
-                playerPosition.gameObject.GetComponent<Player>().loseHealth();
+            {
+                player.GetComponent<Player>().loseHealth();
+            }
         }
 
         rb.constraints = RigidbodyConstraints2D.None;

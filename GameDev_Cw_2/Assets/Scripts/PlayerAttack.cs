@@ -63,7 +63,7 @@ public class PlayerAttack : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
 
-        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector, attackSize);
+        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector * 0.5f, attackSize);
 
         foreach (Collider2D col in collidersAttacked)
         {

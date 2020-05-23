@@ -6,7 +6,7 @@ using Pathfinding;
 public class MeleeAI : MonoBehaviour
 {
 
-    public Transform target;
+    public GameObject target;
     public float speed;
     public float nextWaypointDistance;
 
@@ -84,7 +84,7 @@ public class MeleeAI : MonoBehaviour
     void UpdatePath()
     {
         if (seeker.IsDone())
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            seeker.StartPath(rb.position, target.transform.position, OnPathComplete);
     }
 
     void OnPathComplete(Path p)
@@ -99,5 +99,13 @@ public class MeleeAI : MonoBehaviour
     private bool isAttacking()
     {
         return gameObject.GetComponent<MeleeEnemyAttack>().checkIfAttacking();
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
     }
 }

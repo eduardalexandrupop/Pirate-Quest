@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
             lives[i].enabled = true;
 
         if (health == 0)
+        {
             dead.enabled = true;
+            Debug.Log("dead");
+        }
     }
 }
