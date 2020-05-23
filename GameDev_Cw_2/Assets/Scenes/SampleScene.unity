@@ -436,7 +436,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 448803873}
-  - component: {fileID: 448803872}
   - component: {fileID: 448803871}
   m_Layer: 0
   m_Name: ArenaManager
@@ -470,24 +469,6 @@ MonoBehaviour:
   - {fileID: 1171107613}
   dead: {fileID: 1709596471}
   timerText: {fileID: 1099314726}
---- !u!114 &448803872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448803870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f58439100e508a4c9ed2c888f80bcb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
-  meleePiratePrefab: {fileID: 0}
-  attackBar: {fileID: 0}
-  lives: []
-  dead: {fileID: 0}
-  timerText: {fileID: 0}
 --- !u!4 &448803873
 Transform:
   m_ObjectHideFlags: 0
