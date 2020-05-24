@@ -874,12 +874,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 932803451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f58439100e508a4c9ed2c888f80bcb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 84c2d48d6798d3c459bb752e8082fd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 9039830705868744033, guid: cbcc0ba62898f024fb6a149733e47eb3,
     type: 3}
-  meleePiratePrefab: {fileID: 1334337336706126807, guid: 5423e1019ee94ef488b4b347d0fdbaa4,
+  rangedPiratePrefab: {fileID: 9085307787151253415, guid: 60943d6facd024a40b0203ca8d412885,
     type: 3}
   attackBar: {fileID: 1723997292}
   lives:

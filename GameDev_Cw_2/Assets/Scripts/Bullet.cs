@@ -35,5 +35,20 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        else if (origin == "enemy")
+        {
+            if (collision.gameObject.tag.Equals("Enemy"))
+            {
+                Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+            }
+            else
+            {
+                if (collision.gameObject.tag.Equals("Player"))
+                {
+                    collision.gameObject.GetComponent<Player>().loseHealth();
+                }
+                Destroy(gameObject);
+            }
+        }
     }
 }
