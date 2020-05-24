@@ -22,6 +22,7 @@ public class EnemyAI : MonoBehaviour
     private Vector2 direction;
 
     private static bool enemyCollision = true;
+    private bool pushDamage = false;
 
     // Start is called before the first frame update
     void Start()
@@ -115,6 +116,22 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+        else if (collision.gameObject.tag == "Enemy" && enemyCollision == false)
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+        else if (collision.gameObject.tag == "Obstacle" && pushDamage == true)
+        {
+            gameObject.GetComponent<Enemy>().loseHealth();
+        }
+    }
+
     public static void disableEnemyCollision()
     {
         enemyCollision = false;
@@ -123,5 +140,15 @@ public class EnemyAI : MonoBehaviour
     public static void enableEnemyCollision()
     {
         enemyCollision = true;
+    }
+
+    public void enablePushDamage()
+    {
+        pushDamage = true;
+    }
+
+    public void disablePushDamage()
+    {
+        pushDamage = false;
     }
 }

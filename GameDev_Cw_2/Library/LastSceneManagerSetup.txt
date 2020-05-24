@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/RangedPirateArena.unity
+- path: Assets/Scenes/BoatPirateArena.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

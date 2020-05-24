@@ -28,6 +28,9 @@ public class PlayerAttack : MonoBehaviour
         attackCooldown = 0.5f;
 
         attackSize = 0.3f;
+
+        if (attackType.Equals("boat"))
+            attackCooldown = 0.1f;
     }
 
     // Update is called once per frame
@@ -41,6 +44,8 @@ public class PlayerAttack : MonoBehaviour
                     StartCoroutine(attackMelee(new Vector2(0, 1)));
                 else if (attackType.Equals("ranged"))
                     StartCoroutine(attackRanged(new Vector2(0, 1)));
+                else if (attackType.Equals("boat"))
+                    StartCoroutine(attackBoat(new Vector2(0, 1)));
             }
             else if (Input.GetKey(KeyCode.DownArrow))
             {
@@ -48,6 +53,8 @@ public class PlayerAttack : MonoBehaviour
                     StartCoroutine(attackMelee(new Vector2(0, -1)));
                 else if (attackType.Equals("ranged"))
                     StartCoroutine(attackRanged(new Vector2(0, -1)));
+                else if (attackType.Equals("boat"))
+                    StartCoroutine(attackBoat(new Vector2(0, -1)));
             }
             else if (Input.GetKey(KeyCode.LeftArrow))
             {
@@ -55,6 +62,8 @@ public class PlayerAttack : MonoBehaviour
                     StartCoroutine(attackMelee(new Vector2(-1, 0)));
                 else if (attackType.Equals("ranged"))
                     StartCoroutine(attackRanged(new Vector2(-1, 0)));
+                else if (attackType.Equals("boat"))
+                    StartCoroutine(attackBoat(new Vector2(-1, 0)));
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
@@ -62,6 +71,8 @@ public class PlayerAttack : MonoBehaviour
                     StartCoroutine(attackMelee(new Vector2(1, 0)));
                 else if (attackType.Equals("ranged"))
                     StartCoroutine(attackRanged(new Vector2(1, 0)));
+                else if (attackType.Equals("boat"))
+                    StartCoroutine(attackBoat(new Vector2(1, 0)));
             }
         }
     }
@@ -152,10 +163,69 @@ public class PlayerAttack : MonoBehaviour
         attackOnCooldown = false;
     }
 
+    private IEnumerator attackBoat(Vector2 attackVector)
+    {
+        attacking = true;
+        attackOnCooldown = true;
+        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+
+        animator.SetFloat("HorizontalAttack", attackVector.x);
+        animator.SetFloat("VerticalAttack", attackVector.y);
+        animator.SetTrigger("Attack");
+
+
+        yield return new WaitForSeconds(0.2f);
+
+        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector * 0.5f, attackSize);
+
+        foreach (Collider2D col in collidersAttacked)
+        {
+            if (col.gameObject.tag == "Enemy")
+            {
+                Rigidbody2D rBod = col.gameObject.GetComponent<Rigidbody2D>();
+                rBod.constraints = RigidbodyConstraints2D.None;
+                rBod.constraints = RigidbodyConstraints2D.FreezeRotation;
+                EnemyAI.disableEnemyCollision();
+            }
+        }
+        foreach (Collider2D col in collidersAttacked)
+        {
+            if (col.gameObject.tag == "Enemy")
+            {
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(attackVector * 1000);
+                StartCoroutine(resetEnemyCollision());
+                StartCoroutine(enemyPush(col.gameObject));
+            }
+        }
+
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        attacking = false;
+
+        attackBar.rectTransform.sizeDelta = new Vector2(0, attackBar.rectTransform.sizeDelta.y);
+        float timeProgress = 0f;
+        while (timeProgress < attackCooldown)
+        {
+            attackBar.rectTransform.sizeDelta = new Vector2(60 * timeProgress / attackCooldown, attackBar.rectTransform.sizeDelta.y);
+            yield return new WaitForSeconds(attackCooldown / 100);
+            timeProgress += attackCooldown / 100;
+        }
+        attackOnCooldown = false;
+    }
+
     private IEnumerator resetEnemyCollision()
     {
         yield return new WaitForSeconds(1);
         EnemyAI.enableEnemyCollision();
+    }
+
+    private IEnumerator enemyPush(GameObject enemy)
+    {
+        enemy.GetComponent<EnemyAI>().enablePushDamage();
+        yield return new WaitForSeconds(1f);
+        if (enemy != null)
+            enemy.GetComponent<EnemyAI>().disablePushDamage();
     }
 
     public bool checkIfAttacking()

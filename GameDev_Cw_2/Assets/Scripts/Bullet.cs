@@ -39,7 +39,7 @@ public class Bullet : MonoBehaviour
         {
             if (collision.gameObject.tag.Equals("Enemy"))
             {
-                Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+                Destroy(gameObject);
             }
             else
             {
