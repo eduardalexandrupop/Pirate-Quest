@@ -32,7 +32,6 @@ public class Player : MonoBehaviour
         if (health == 0)
         {
             dead.enabled = true;
-            Debug.Log("dead");
         }
     }
 }

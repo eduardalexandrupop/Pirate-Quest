@@ -66,11 +66,11 @@ public class PirateArena1Manager : MonoBehaviour
 
             GameObject enemy;
             enemy = Instantiate(meleePiratePrefab, new Vector3(spawnPoint1.x, spawnPoint1.y, 0), Quaternion.identity);
-            enemy.GetComponent<MeleeAI>().target = playerInstance;
-            enemy.GetComponent<MeleeEnemyAttack>().player = playerInstance;
+            enemy.GetComponent<EnemyAI>().target = playerInstance;
+            enemy.GetComponent<EnemyAttack>().player = playerInstance;
             enemy = Instantiate(meleePiratePrefab, new Vector3(spawnPoint2.x, spawnPoint2.y, 0), Quaternion.identity);
-            enemy.GetComponent<MeleeAI>().target = playerInstance;
-            enemy.GetComponent<MeleeEnemyAttack>().player = playerInstance;
+            enemy.GetComponent<EnemyAI>().target = playerInstance;
+            enemy.GetComponent<EnemyAttack>().player = playerInstance;
         }
     }
 

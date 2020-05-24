@@ -119,8 +119,8 @@ GameObject:
   - component: {fileID: 1334337336706126804}
   - component: {fileID: 1334337336706126800}
   - component: {fileID: 1334337336706126803}
-  - component: {fileID: 1334337336706126801}
   - component: {fileID: 1334337336706126638}
+  - component: {fileID: 3877992289533779133}
   m_Layer: 8
   m_Name: MeleePirate
   m_TagString: Enemy
@@ -224,20 +224,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &1334337336706126801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334337336706126807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3589597db466bfd448ca49b9a4c3afe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1334337334756022956}
-  playerPosition: {fileID: 0}
 --- !u!114 &1334337336706126638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +237,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+--- !u!114 &3877992289533779133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334337336706126807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3589597db466bfd448ca49b9a4c3afe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1334337334756022956}
+  player: {fileID: 0}
+  attackRange: 0.7
 --- !u!1001 &1334337335448889145
 PrefabInstance:
   m_ObjectHideFlags: 0

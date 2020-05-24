@@ -5,18 +5,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public CircleCollider2D collider;
     public Animator animator;
 
     private float speed = 2.5f;
     private Vector2 moveVector;
-    private bool canMove;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        canMove = true;
 
         animator.SetFloat("HorizontalIdle", 0);
         animator.SetFloat("VerticalIdle", -1);
