@@ -151,4 +151,9 @@ public class EnemyAI : MonoBehaviour
     {
         pushDamage = false;
     }
+
+    public bool getPushDamageEnabled()
+    {
+        return pushDamage;
+    }
 }

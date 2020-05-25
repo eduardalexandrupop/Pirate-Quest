@@ -22,6 +22,10 @@ public class Enemy : MonoBehaviour
     {
         health--;
         if (health == 0)
+        {
             Destroy(gameObject);
+            if (gameObject.name.Contains("Ant"))
+                AntsArenaManager.killAnt();
+        }
     }
 }

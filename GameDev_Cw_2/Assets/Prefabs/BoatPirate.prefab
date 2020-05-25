@@ -71,9 +71,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 2
+  speed: 1.6
   nextWaypointDistance: 0.1
-  animator: {fileID: 4821025988017371130}
+  animator: {fileID: 4191008291333765019}
 --- !u!114 &9191573888747202725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3589597db466bfd448ca49b9a4c3afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 4821025988017371130}
+  animator: {fileID: 4191008291333765019}
   player: {fileID: 0}
   attackRange: 0.7
   type: melee
@@ -146,8 +146,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004066944, y: -0.085407495}
-  m_Size: {x: 0.36172104, y: 0.520092}
+  m_Offset: {x: -0.004066944, y: 0.004639864}
+  m_Size: {x: 0.41317654, y: 0.7001867}
   m_Direction: 0
 --- !u!1 &9191573888952974886
 GameObject:
@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9191573888952967645}
   - component: {fileID: 9191573888952967644}
-  - component: {fileID: 4821025988017371130}
+  - component: {fileID: 4191008291333765019}
   m_Layer: 8
   m_Name: BoatPirateGFX
   m_TagString: Untagged
@@ -232,7 +232,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4821025988017371130
+--- !u!95 &4191008291333765019
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

@@ -47,15 +47,14 @@ public class EnemyAttack : MonoBehaviour
     private IEnumerator attackMelee(Vector2 attackVector)
     {
         attacking = true;
-        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+        if (gameObject.GetComponent<EnemyAI>().getPushDamageEnabled())
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
         yield return new WaitForSeconds(0.3f);
         animator.SetFloat("HorizontalAttack", attackVector.x);
         animator.SetFloat("VerticalAttack", attackVector.y);
         animator.SetTrigger("Attack");
 
-
-        yield return new WaitForSeconds(0.7f);
-
+        yield return new WaitForSeconds(0.3f);
         Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector*0.5f, meleeAttackSize);
         foreach (Collider2D col in collidersAttacked)
         {
@@ -64,6 +63,7 @@ public class EnemyAttack : MonoBehaviour
                 player.GetComponent<Player>().loseHealth();
             }
         }
+        yield return new WaitForSeconds(0.4f);
 
         rb.constraints = RigidbodyConstraints2D.None;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
