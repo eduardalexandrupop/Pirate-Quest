@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/DucksArena.unity
+- path: Assets/Scenes/AntsArena.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

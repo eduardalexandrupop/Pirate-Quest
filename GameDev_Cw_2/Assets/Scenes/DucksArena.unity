@@ -976,6 +976,8 @@ MonoBehaviour:
     type: 3}
   crocodilePrefab: {fileID: 7089042528841851782, guid: eacbad6544fe2874b80485a909439f4a,
     type: 3}
+  duckPrefab: {fileID: 1774161048766272240, guid: 0ad15de9e9c00174f87bf2699b52426e,
+    type: 3}
   attackBar: {fileID: 410898178}
   lives:
   - {fileID: 1938769479}
@@ -1647,7 +1649,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0/12
+  m_Text: '0/8
 
 '
 --- !u!222 &861416472

@@ -7,6 +7,7 @@ public class DucksArenaManager : MonoBehaviour
 {
     public GameObject playerPrefab;
     public GameObject crocodilePrefab;
+    public GameObject duckPrefab;
     public Image attackBar;
     public Image[] lives;
     public Text dead;
@@ -14,15 +15,18 @@ public class DucksArenaManager : MonoBehaviour
     public Text counterText;
 
     private List<Vector2> spawnPoints;
-    private GameObject playerInstance;
+    private List<Vector2> duckSpawnPoints;
+    private static GameObject playerInstance;
 
-    private float timeBetweenWaves = 7f;
+    private float timeBetweenWaves = 10f;
     private float arenaDuration = 60f;
     private float timer;
 
     private float startTime;
 
     private static int ducksHunted;
+
+    private static int ducksOnMap;
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +46,21 @@ public class DucksArenaManager : MonoBehaviour
         spawnPoints.Add(new Vector2(6, -5));
         spawnPoints.Add(new Vector2(-6, 5));
 
+        duckSpawnPoints = new List<Vector2>();
+        duckSpawnPoints.Add(new Vector2(-5, -2));
+        duckSpawnPoints.Add(new Vector2(-5, 2));
+        duckSpawnPoints.Add(new Vector2(5, 2));
+        duckSpawnPoints.Add(new Vector2(5, -2));
+        duckSpawnPoints.Add(new Vector2(0, -2));
+        duckSpawnPoints.Add(new Vector2(-5, 2));
+
         startTime = Time.time;
         timer = arenaDuration;
-        InvokeRepeating("spawnEnemies", 2f, timeBetweenWaves);
+        InvokeRepeating("spawnEnemies", 4f, timeBetweenWaves);
+        InvokeRepeating("spawnDucks", 2f, 5f);
 
         ducksHunted = 0;
+        ducksOnMap = 0;
     }
 
     // Update is called once per frame
@@ -74,9 +88,22 @@ public class DucksArenaManager : MonoBehaviour
             enemy = Instantiate(crocodilePrefab, new Vector3(spawnPoint1.x, spawnPoint1.y, 0), Quaternion.identity);
             enemy.GetComponent<EnemyAI>().target = playerInstance;
             enemy.GetComponent<EnemyAttack>().player = playerInstance;
+            
             enemy = Instantiate(crocodilePrefab, new Vector3(spawnPoint2.x, spawnPoint2.y, 0), Quaternion.identity);
             enemy.GetComponent<EnemyAI>().target = playerInstance;
             enemy.GetComponent<EnemyAttack>().player = playerInstance;
+        }
+    }
+
+    void spawnDucks()
+    {
+        if (ducksOnMap < 3)
+        {
+            Vector2 duckSpawnPoint = duckSpawnPoints[Random.Range(0, duckSpawnPoints.Count)];
+
+            GameObject duck = Instantiate(duckPrefab, new Vector3(duckSpawnPoint.x, duckSpawnPoint.y, 0), Quaternion.identity);
+            duck.GetComponent<Duck>().setPlayerInstance(playerInstance);
+            ducksOnMap++;
         }
     }
 
@@ -88,11 +115,17 @@ public class DucksArenaManager : MonoBehaviour
 
     void displayCounter()
     {
-        counterText.text = ducksHunted.ToString() + "/12";
+        counterText.text = ducksHunted.ToString() + "/8";
     }
 
     public static void huntDuck()
     {
         ducksHunted++;
+        ducksOnMap--;
+    }
+
+    public static GameObject getPlayerInstance()
+    {
+        return playerInstance;
     }
 }
