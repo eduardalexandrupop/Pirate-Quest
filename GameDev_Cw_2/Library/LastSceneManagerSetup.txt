@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SkeletonsArena.unity
+- path: Assets/Scenes/SharksArena.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
