@@ -28,9 +28,13 @@ public class Bullet : MonoBehaviour
             }
             else
             {
-                if (collision.gameObject.tag.Equals("Enemy"))
+                if (collision.gameObject.name.Contains("Blackbeard"))
                 {
-                    collision.gameObject.GetComponent<Enemy>().loseHealth();
+                    collision.gameObject.GetComponent<Enemy>().loseHealth(5);
+                }
+                else if (collision.gameObject.tag.Equals("Enemy"))
+                {
+                    collision.gameObject.GetComponent<Enemy>().loseHealth(1);
                 }
                 Destroy(gameObject);
             }
@@ -50,5 +54,10 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    public string getOrigin()
+    {
+        return origin;
     }
 }

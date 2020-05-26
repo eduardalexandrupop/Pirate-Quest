@@ -121,7 +121,15 @@ public class EnemyAI : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.name.Contains("Bee"))
+        {
+            if (gameObject.name.Contains("Blackbeard"))
+            {
+                gameObject.GetComponent<Enemy>().loseHealth(5);
+                Destroy(collision.gameObject);
+            }
+        }
+        else if (collision.gameObject.tag == "Wall")
         {
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
@@ -131,7 +139,10 @@ public class EnemyAI : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Obstacle" && pushDamage == true)
         {
-            gameObject.GetComponent<Enemy>().loseHealth();
+            if (gameObject.name.Contains("Blackbeard"))
+                gameObject.GetComponent<Enemy>().loseHealth(5);
+            else
+                gameObject.GetComponent<Enemy>().loseHealth(1);
         }
     }
 

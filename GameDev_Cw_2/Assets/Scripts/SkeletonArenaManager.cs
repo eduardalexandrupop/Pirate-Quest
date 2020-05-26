@@ -23,7 +23,7 @@ public class SkeletonArenaManager : MonoBehaviour
 
     private static GameObject playerInstance;
 
-    private float timeBetweenWaves = 5f;
+    private float timeBetweenWaves = 10f;
     private float arenaDuration = 60f;
     private float timer;
 

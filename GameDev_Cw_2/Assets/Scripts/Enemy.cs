@@ -18,14 +18,23 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void loseHealth()
+    public void loseHealth(int lostAmount)
     {
-        health--;
-        if (health == 0)
+        health -= lostAmount;
+        if (health <= 0)
         {
-            Destroy(gameObject);
+            health = 0;
+            if (!gameObject.name.Contains("Blackbeard"))
+            {
+                Destroy(gameObject);
+            }
             if (gameObject.name.Contains("Ant"))
                 AntsArenaManager.killAnt();
         }
+    }
+
+    public int getHealth()
+    {
+        return health;
     }
 }

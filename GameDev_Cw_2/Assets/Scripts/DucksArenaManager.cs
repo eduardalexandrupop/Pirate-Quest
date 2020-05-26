@@ -20,7 +20,7 @@ public class DucksArenaManager : MonoBehaviour
     private List<Vector2> duckSpawnPoints;
     private static GameObject playerInstance;
 
-    private float timeBetweenWaves = 10f;
+    private float timeBetweenWaves = 15f;
     private float arenaDuration = 60f;
     private float timer;
 

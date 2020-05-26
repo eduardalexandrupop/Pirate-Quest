@@ -35,7 +35,7 @@ public class PlayerAttack : MonoBehaviour
         attacking = false;
         attackOnCooldown = false;
         attackCooldown = 0.5f;
-        attackSize = 0.3f;
+        attackSize = 0.4f;
 
         specialAttacking = false;
         specialAttackOnCooldown = false;
@@ -129,13 +129,20 @@ public class PlayerAttack : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
 
-        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector * 0.5f, attackSize);
+        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector * 0.6f, attackSize);
 
         foreach (Collider2D col in collidersAttacked)
         {
             if (col.gameObject.tag == "Enemy")
             {
-                col.gameObject.GetComponent<Enemy>().loseHealth();
+                if (col.gameObject.name.Contains("Blackbeard"))
+                {
+                    col.gameObject.GetComponent<Enemy>().loseHealth(5);
+                }
+                else
+                {
+                    col.gameObject.GetComponent<Enemy>().loseHealth(1);
+                }
                 Rigidbody2D rBod = col.gameObject.GetComponent<Rigidbody2D>();
                 rBod.constraints = RigidbodyConstraints2D.None;
                 rBod.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -215,7 +222,7 @@ public class PlayerAttack : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
 
-        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector * 0.5f, attackSize);
+        Collider2D[] collidersAttacked = Physics2D.OverlapCircleAll(rb.position + attackVector * 0.6f, attackSize);
 
         foreach (Collider2D col in collidersAttacked)
         {
@@ -270,7 +277,14 @@ public class PlayerAttack : MonoBehaviour
         {
             if (col.gameObject.tag == "Enemy")
             {
-                col.gameObject.GetComponent<Enemy>().loseHealth();
+                if (col.gameObject.name.Contains("Blackbeard"))
+                {
+                    col.gameObject.GetComponent<Enemy>().loseHealth(5);
+                }
+                else
+                {
+                    col.gameObject.GetComponent<Enemy>().loseHealth(1);
+                }
                 Rigidbody2D rBod = col.gameObject.GetComponent<Rigidbody2D>();
                 rBod.constraints = RigidbodyConstraints2D.None;
                 rBod.constraints = RigidbodyConstraints2D.FreezeRotation;
