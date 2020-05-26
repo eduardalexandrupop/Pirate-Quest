@@ -137,7 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 9039830705868744350}
   animator: {fileID: 5145965026033856961}
+  specialAttackUnlocked: 0
   attackBar: {fileID: 0}
+  specialAttackBar: {fileID: 0}
   attackType: ranged
   bulletPrefab: {fileID: 179372883690607585, guid: f7f3a3eddd749fb4bad2625fe4a7bf6f,
     type: 3}

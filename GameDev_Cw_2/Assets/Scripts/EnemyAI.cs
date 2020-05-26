@@ -58,7 +58,7 @@ public class EnemyAI : MonoBehaviour
 
         direction = ((Vector2) path.vectorPath[currentWayPoint] - rb.position).normalized;
 
-        if (!isAttacking())
+        if (!isAttacking() && pushDamage == false)
             rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
@@ -86,7 +86,7 @@ public class EnemyAI : MonoBehaviour
 
     void UpdatePath()
     {
-        if (seeker.IsDone())
+        if (seeker.IsDone() && target != null)
             seeker.StartPath(rb.position, target.transform.position, OnPathComplete);
     }
 
@@ -101,7 +101,10 @@ public class EnemyAI : MonoBehaviour
 
     private bool isAttacking()
     {
-        return gameObject.GetComponent<EnemyAttack>().checkIfAttacking();
+        if (gameObject.GetComponent<EnemyAttack>() != null)
+            return gameObject.GetComponent<EnemyAttack>().checkIfAttacking();
+        else
+            return false;
     }
 
     void OnCollisionStay2D(Collision2D collision)

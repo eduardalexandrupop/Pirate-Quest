@@ -156,7 +156,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4937611260470486041}
   animator: {fileID: 8093389183898042566}
+  specialAttackUnlocked: 1
   attackBar: {fileID: 0}
+  specialAttackBar: {fileID: 0}
   attackType: melee
   bulletPrefab: {fileID: 179372883690607585, guid: f7f3a3eddd749fb4bad2625fe4a7bf6f,
     type: 3}

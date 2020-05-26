@@ -56,6 +56,7 @@ public class HoneyComb : MonoBehaviour
                 {
                     BeesArenaManager.gatherHoney();
                     Destroy(gameObject);
+                    GameObject.Destroy(collectBarInstance);
                 }
                 yield return new WaitForSeconds(0.07f);
             }

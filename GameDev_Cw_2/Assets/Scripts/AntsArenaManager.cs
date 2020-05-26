@@ -8,6 +8,8 @@ public class AntsArenaManager : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject antPrefab;
     public Image attackBar;
+    public Image specialAttackBar;
+    public Image specialAttackImage;
     public Image[] lives;
     public Text dead;
     public Text timerText;
@@ -31,6 +33,13 @@ public class AntsArenaManager : MonoBehaviour
         playerInstance.GetComponent<PlayerAttack>().attackBar = attackBar;
         playerInstance.GetComponent<Player>().lives = lives;
         playerInstance.GetComponent<Player>().dead = dead;
+
+        playerInstance.GetComponent<PlayerAttack>().specialAttackBar = specialAttackBar;
+        if (playerInstance.GetComponent<PlayerAttack>().getSpecialAttackUnlocked() == false)
+        {
+            specialAttackBar.gameObject.SetActive(false);
+            specialAttackImage.gameObject.SetActive(false);
+        }
 
         spawnPoints = new List<Vector2>();
         spawnPoints.Add(new Vector2(8, 3));

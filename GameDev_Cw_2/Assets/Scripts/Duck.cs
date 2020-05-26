@@ -86,6 +86,7 @@ public class Duck : MonoBehaviour
                 {
                     DucksArenaManager.huntDuck();
                     Destroy(gameObject);
+                    GameObject.Destroy(collectBarInstance);
                 }
                 yield return new WaitForSeconds(0.07f);
             }
