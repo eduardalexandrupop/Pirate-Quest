@@ -6,13 +6,11 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public Image[] lives;
-    public Text dead;
     private int health = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-        dead.enabled = false;
     }
 
     // Update is called once per frame
@@ -29,9 +27,9 @@ public class Player : MonoBehaviour
         for (int i = 0; i < health; i++)
             lives[i].enabled = true;
 
-        if (health == 0)
+        if (health <= 0)
         {
-            dead.enabled = true;
+            StoryManager.failChallenge();
         }
     }
 }

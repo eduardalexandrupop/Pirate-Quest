@@ -2233,7 +2233,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66b4298721055834180656b325676c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 5425486930514545608, guid: 0b9f402715a8b5e4295f1c2926e28818,
+  swordPlayerPrefab: {fileID: 8737716608179771490, guid: 0a96e9e46eaa65e4c82d67badd209ed7,
+    type: 3}
+  gunPlayerPrefab: {fileID: 5425486930514545608, guid: 0b9f402715a8b5e4295f1c2926e28818,
+    type: 3}
+  boatPlayerPrefab: {fileID: 6786902365763313250, guid: 2c62a35a760a0404f84e3b033b5255aa,
     type: 3}
   sharkPrefab: {fileID: 1752080998538847102, guid: 111b3c7854a0c9747b640d499fd7f93f,
     type: 3}
@@ -2248,9 +2252,8 @@ MonoBehaviour:
   - {fileID: 125544904}
   - {fileID: 1663214293}
   - {fileID: 463767343}
-  dead: {fileID: 1154024093}
   timerText: {fileID: 303210445}
-  crocodileUnlocked: 1
+  crocodileUnlocked: 0
   crocodileBar: {fileID: 1856110998}
   crocodileImage: {fileID: 507335748}
   friendlyCrocodilePrefab: {fileID: 9027396611446925116, guid: 7236d227589e02c4aabfa19475302fbf,

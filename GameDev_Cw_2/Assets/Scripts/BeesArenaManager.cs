@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BeesArenaManager : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class BeesArenaManager : MonoBehaviour
     public Image specialAttackBar;
     public Image specialAttackImage;
     public Image[] lives;
-    public Text dead;
     public Text timerText;
     public Text counterText;
 
@@ -36,7 +36,6 @@ public class BeesArenaManager : MonoBehaviour
         playerInstance = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         playerInstance.GetComponent<PlayerAttack>().attackBar = attackBar;
         playerInstance.GetComponent<Player>().lives = lives;
-        playerInstance.GetComponent<Player>().dead = dead;
 
         playerInstance.GetComponent<PlayerAttack>().specialAttackBar = specialAttackBar;
         if (playerInstance.GetComponent<PlayerAttack>().getSpecialAttackUnlocked() == false)
@@ -78,7 +77,13 @@ public class BeesArenaManager : MonoBehaviour
         float timePassed = Time.time - startTime;
         timer = arenaDuration - timePassed;
         if (timer < 0)
+        {
             timer = 0;
+            if (honeyGathered < 8)
+                StoryManager.failChallenge();
+            else
+                SceneManager.LoadScene("CompleteChallenge");
+        }
 
         displayTimer();
         displayCounter();

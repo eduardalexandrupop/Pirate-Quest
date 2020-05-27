@@ -140,9 +140,9 @@ public class EnemyAI : MonoBehaviour
         else if (collision.gameObject.tag == "Obstacle" && pushDamage == true)
         {
             if (gameObject.name.Contains("Blackbeard"))
-                gameObject.GetComponent<Enemy>().loseHealth(5);
+                gameObject.GetComponent<Enemy>().loseHealth(10);
             else
-                gameObject.GetComponent<Enemy>().loseHealth(1);
+                gameObject.GetComponent<Enemy>().loseHealth(2);
         }
     }
 

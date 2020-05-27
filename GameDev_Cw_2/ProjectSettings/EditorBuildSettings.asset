@@ -6,6 +6,108 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 099beecef29af254a9d16a4a9201e2f7
+  - enabled: 1
     path: Assets/Scenes/MeleePirateArena.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TimeSkip.unity
+    guid: f0170fd285b33f3438c74b3cad59e937
+  - enabled: 1
+    path: Assets/Scenes/Abandon.unity
+    guid: edc6bdd7fbbfe0f4da6040ea4384c14e
+  - enabled: 1
+    path: Assets/Scenes/AntIsland.unity
+    guid: 84fa319bdb4f5db45b571dfb35d171ba
+  - enabled: 1
+    path: Assets/Scenes/AntsArena.unity
+    guid: 692165e4848cd974d9e72d36ba52ae5e
+  - enabled: 1
+    path: Assets/Scenes/AssassinateEnding.unity
+    guid: cdee58a73897cc5478570aa0a8e8c28d
+  - enabled: 1
+    path: Assets/Scenes/BeeIsland.unity
+    guid: abca5c43033308542b3f25c91e8437c4
+  - enabled: 1
+    path: Assets/Scenes/BeesArena.unity
+    guid: a41616a4148ffe547b3d388574962acc
+  - enabled: 1
+    path: Assets/Scenes/BlackbeardArena.unity
+    guid: 991e10c3407decb4fa7ecc57ca9f222f
+  - enabled: 1
+    path: Assets/Scenes/BoatPirateArena.unity
+    guid: 06aa48e171727384985644d0ead5696f
+  - enabled: 1
+    path: Assets/Scenes/Captain.unity
+    guid: 27dfd3db9ee1944468cb09ffae3edfb1
+  - enabled: 1
+    path: Assets/Scenes/CompleteChallenge.unity
+    guid: 3065c36ba5151a748a84024be5e9d749
+  - enabled: 1
+    path: Assets/Scenes/DuckIsland.unity
+    guid: 0eb2542cb62007247a753b7289ee5a52
+  - enabled: 1
+    path: Assets/Scenes/DucksArena.unity
+    guid: d5c07320418a08545b20db93cfd750b4
+  - enabled: 1
+    path: Assets/Scenes/Endings.unity
+    guid: 695d800edc7b6eb48a4c3a448228ff0c
+  - enabled: 1
+    path: Assets/Scenes/EscapeEnding.unity
+    guid: 91f7aaa4c7b52cf48bb75d9d6c2ecb42
+  - enabled: 1
+    path: Assets/Scenes/ExecutedEnding.unity
+    guid: e57eedb84ddcf554ba3d60831d8c6592
+  - enabled: 1
+    path: Assets/Scenes/FailedSharks.unity
+    guid: 906424abc14137e4c87a5bce59074ff4
+  - enabled: 1
+    path: Assets/Scenes/FailedSkeletons.unity
+    guid: 4568950793977c34186cb7b07c3e9d92
+  - enabled: 1
+    path: Assets/Scenes/FirstMateEnding.unity
+    guid: 1a76c4c4d9ac6df4e8cf6f0bbe858504
+  - enabled: 1
+    path: Assets/Scenes/FoundKey.unity
+    guid: e02f9bee7a3a5d5428708497684eae9d
+  - enabled: 1
+    path: Assets/Scenes/FoundTreasure.unity
+    guid: 0734e264c1dcd0945ae1cca39a45d04e
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: e345ed7942a14d1449c5e5018dabe615
+  - enabled: 1
+    path: Assets/Scenes/Monkey.unity
+    guid: dff04de4ae05862419588c89860ca876
+  - enabled: 1
+    path: Assets/Scenes/NewBlackbeardEnding.unity
+    guid: e678561fe5a9c764b9bd5608bea198b1
+  - enabled: 1
+    path: Assets/Scenes/Parrot.unity
+    guid: 697c194419cf9504092142df328438ad
+  - enabled: 1
+    path: Assets/Scenes/RangedPirateArena.unity
+    guid: ff4fa6d8c89fecb4d8cccdab3673ee42
+  - enabled: 1
+    path: Assets/Scenes/SharksArena.unity
+    guid: e9b3767aeb15b5449bd6b5bcf01268a3
+  - enabled: 1
+    path: Assets/Scenes/ShotEnding.unity
+    guid: 4d97d92c9d75beb4187110c5e24b3754
+  - enabled: 1
+    path: Assets/Scenes/SkeletonsArena.unity
+    guid: 20be6af67ea762342955da0204f99bcb
+  - enabled: 1
+    path: Assets/Scenes/SlavesEnding.unity
+    guid: f0857fe4b7ea2d6468c88012e8b261c2
+  - enabled: 1
+    path: Assets/Scenes/StealTreasureEnding.unity
+    guid: 6efc216e6b058b54badaa33225043edb
+  - enabled: 1
+    path: Assets/Scenes/TryAgain.unity
+    guid: d0e83dd4a9b8f4141b81049810c9be30
+  - enabled: 1
+    path: Assets/Scenes/WeaponSelection.unity
+    guid: 7c177494dcd8aca459a9fc3a59ca6673
   m_configObjects: {}

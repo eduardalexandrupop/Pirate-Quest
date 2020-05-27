@@ -35,7 +35,7 @@ public class EnemyAttack : MonoBehaviour
         // blackbeard specifics
         blackbeardMeleeRange = 0.7f;
         blackbeardRangedRange = 5f;
-        blackbeardMeleeAttackSize = 0.6f;
+        blackbeardMeleeAttackSize = 0.9f;
         blackbeardTransitionRange = 3.0f;
     }
 

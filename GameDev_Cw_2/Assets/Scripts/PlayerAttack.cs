@@ -34,7 +34,7 @@ public class PlayerAttack : MonoBehaviour
     {
         attacking = false;
         attackOnCooldown = false;
-        attackCooldown = 0.5f;
+        attackCooldown = 0.3f;
         attackSize = 0.4f;
 
         specialAttacking = false;
@@ -426,5 +426,10 @@ public class PlayerAttack : MonoBehaviour
     public bool getSpecialAttackUnlocked()
     {
         return specialAttackUnlocked;
+    }
+
+    public void setSpecialAttackUnlocked(bool value)
+    {
+        specialAttackUnlocked = value;
     }
 }

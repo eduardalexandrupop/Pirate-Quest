@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SharkArenaManager : MonoBehaviour
 {
-    public GameObject playerPrefab;
+    public GameObject swordPlayerPrefab;
+    public GameObject gunPlayerPrefab;
+    public GameObject boatPlayerPrefab;
     public GameObject sharkPrefab;
     public GameObject barrelPrefab;
     public Image attackBar;
     public Image specialAttackBar;
     public Image specialAttackImage;
     public Image[] lives;
-    public Text dead;
     public Text timerText;
 
     private List<Vector2> spawnPoints;
@@ -50,22 +52,40 @@ public class SharkArenaManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerInstance = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        if (StoryManager.selectedWeapon.Equals("sword"))
+            playerInstance = Instantiate(swordPlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        else if (StoryManager.selectedWeapon.Equals("gun"))
+            playerInstance = Instantiate(gunPlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        else if (StoryManager.selectedWeapon.Equals("boat"))
+            playerInstance = Instantiate(boatPlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         playerInstance.GetComponent<PlayerAttack>().attackBar = attackBar;
         playerInstance.GetComponent<Player>().lives = lives;
-        playerInstance.GetComponent<Player>().dead = dead;
 
         playerInstance.GetComponent<PlayerAttack>().specialAttackBar = specialAttackBar;
-        if (playerInstance.GetComponent<PlayerAttack>().getSpecialAttackUnlocked() == false)
+        if (StoryManager.getUnlockedSpecial(StoryManager.selectedWeapon))
         {
+            playerInstance.GetComponent<PlayerAttack>().setSpecialAttackUnlocked(true);
+            specialAttackBar.gameObject.SetActive(true);
+            specialAttackImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            playerInstance.GetComponent<PlayerAttack>().setSpecialAttackUnlocked(false);
             specialAttackBar.gameObject.SetActive(false);
             specialAttackImage.gameObject.SetActive(false);
         }
 
-        if (crocodileUnlocked == false)
+        if (StoryManager.unlockedCrocodiles == false)
         {
+            crocodileUnlocked = false;
             crocodileBar.gameObject.SetActive(false);
             crocodileImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            crocodileUnlocked = true;
+            crocodileBar.gameObject.SetActive(true);
+            crocodileImage.gameObject.SetActive(true);
         }
 
         spawnPoints = new List<Vector2>();
@@ -109,10 +129,19 @@ public class SharkArenaManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (foundKey)
+            SceneManager.LoadScene("CompleteChallenge");
+
         float timePassed = Time.time - startTime;
         timer = arenaDuration - timePassed;
         if (timer < 0)
+        {
             timer = 0;
+            if (foundKey == false)
+                StoryManager.failChallenge();
+            else
+                SceneManager.LoadScene("CompleteChallenge");
+        }
 
         displayTimer();
 

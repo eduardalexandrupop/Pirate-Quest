@@ -2991,7 +2991,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199eb2eaac93ffd4e8e076b0adc80146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 9039830705868744033, guid: cbcc0ba62898f024fb6a149733e47eb3,
+  swordPlayerPrefab: {fileID: 4937611260470487014, guid: fd622e52a3b172440bc4269b3f8be002,
+    type: 3}
+  gunPlayerPrefab: {fileID: 9039830705868744033, guid: cbcc0ba62898f024fb6a149733e47eb3,
+    type: 3}
+  boatPlayerPrefab: {fileID: 6476215806142400057, guid: b2a6dd5a8722ef442b811de2dd1ebbd9,
     type: 3}
   blackbeardPrefab: {fileID: 6640170432601844588, guid: 44f79596bb887c24089eaab900de9019,
     type: 3}
@@ -3010,8 +3014,7 @@ MonoBehaviour:
   - {fileID: 23012458}
   - {fileID: 1546665871}
   - {fileID: 1384100912}
-  dead: {fileID: 1641262136}
-  beeUnlocked: 1
+  beeUnlocked: 0
   beeBar: {fileID: 1116562558}
   beeImage: {fileID: 714715426}
   friendlyBeePrefab: {fileID: 5763097730157638425, guid: 7fa327e68282ba24daffb9c2efab7378,

@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6476215806142399942}
   animator: {fileID: 8827044698849189897}
-  specialAttackUnlocked: 1
+  specialAttackUnlocked: 0
   attackBar: {fileID: 0}
   specialAttackBar: {fileID: 0}
   attackType: boat
@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: []
-  dead: {fileID: 0}
 --- !u!95 &8827044698849189897
 Animator:
   serializedVersion: 3

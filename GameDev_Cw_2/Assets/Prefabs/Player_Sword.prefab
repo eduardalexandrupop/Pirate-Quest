@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4937611260470486041}
   animator: {fileID: 8093389183898042566}
-  specialAttackUnlocked: 1
+  specialAttackUnlocked: 0
   attackBar: {fileID: 0}
   specialAttackBar: {fileID: 0}
   attackType: melee
@@ -191,4 +191,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: []
-  dead: {fileID: 0}

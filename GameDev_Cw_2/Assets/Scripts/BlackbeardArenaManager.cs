@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BlackbeardArenaManager : MonoBehaviour
 {
-    public GameObject playerPrefab;
+    public GameObject swordPlayerPrefab;
+    public GameObject gunPlayerPrefab;
+    public GameObject boatPlayerPrefab;
     public GameObject blackbeardPrefab;
     public GameObject meleePiratePrefab;
     public GameObject rangedPiratePrefab;
@@ -15,7 +18,6 @@ public class BlackbeardArenaManager : MonoBehaviour
     public Image specialAttackBar;
     public Image specialAttackImage;
     public Image[] lives;
-    public Text dead;
 
     private List<Vector2> spawnPoints;
     private Vector2 blackbeardSpawnPoint;
@@ -44,22 +46,41 @@ public class BlackbeardArenaManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerInstance = Instantiate(playerPrefab, new Vector3(-5, 0, 0), Quaternion.identity);
+        if (StoryManager.selectedWeapon.Equals("sword"))
+            playerInstance = Instantiate(swordPlayerPrefab, new Vector3(-5, 0, 0), Quaternion.identity);
+        else if (StoryManager.selectedWeapon.Equals("gun"))
+            playerInstance = Instantiate(gunPlayerPrefab, new Vector3(-5, 0, 0), Quaternion.identity);
+        else if (StoryManager.selectedWeapon.Equals("boat"))
+            playerInstance = Instantiate(boatPlayerPrefab, new Vector3(-5, 0, 0), Quaternion.identity);
         playerInstance.GetComponent<PlayerAttack>().attackBar = attackBar;
         playerInstance.GetComponent<Player>().lives = lives;
-        playerInstance.GetComponent<Player>().dead = dead;
 
         playerInstance.GetComponent<PlayerAttack>().specialAttackBar = specialAttackBar;
-        if (playerInstance.GetComponent<PlayerAttack>().getSpecialAttackUnlocked() == false)
+
+        if (StoryManager.getUnlockedSpecial(StoryManager.selectedWeapon))
         {
+            playerInstance.GetComponent<PlayerAttack>().setSpecialAttackUnlocked(true);
+            specialAttackBar.gameObject.SetActive(true);
+            specialAttackImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            playerInstance.GetComponent<PlayerAttack>().setSpecialAttackUnlocked(false);
             specialAttackBar.gameObject.SetActive(false);
             specialAttackImage.gameObject.SetActive(false);
         }
 
-        if (beeUnlocked == false)
+        if (StoryManager.unlockedBees == false)
         {
+            beeUnlocked = false;
             beeBar.gameObject.SetActive(false);
             beeImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            beeUnlocked = true;
+            beeBar.gameObject.SetActive(true);
+            beeImage.gameObject.SetActive(true);
         }
 
         spawnPoints = new List<Vector2>();
@@ -90,6 +111,9 @@ public class BlackbeardArenaManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (blackbeardInstance.GetComponent<Enemy>().getHealth() <= 0)
+            SceneManager.LoadScene("CompleteChallenge");
+
         // bee power
         if (beeOnCooldown == false && beeUnlocked)
         {
