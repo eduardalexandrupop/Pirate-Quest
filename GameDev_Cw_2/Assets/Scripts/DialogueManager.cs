@@ -33,6 +33,8 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.instance.playCutscene();
+
         playerImage.enabled = false;
         otherImage.enabled = false;
         sayer.text = "";

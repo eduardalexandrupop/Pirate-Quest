@@ -1,5 +1,5 @@
 ﻿
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +7,9 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance = null;
 
-    public AudioSource buttonClick;
+    public AudioSource menuEnding;
+    public AudioSource cutScene;
+    public AudioSource arenas;
 
 
     // Start is called before the first frame update
@@ -24,16 +26,42 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void playButtonClick()
+    public void playMenuEnding()
     {
-        buttonClick.Play();
+        stopArenas();
+        stopCutscene();
+        if (menuEnding.isPlaying == false)
+            menuEnding.Play();
     }
 
-    public void playMenuTrack()
+    public void stopMenuEnding()
     {
-        if (menuTrack.isPlaying == false)
-            menuTrack.Play();
+        menuEnding.Stop();
     }
 
+    public void playCutscene()
+    {
+        stopMenuEnding();
+        stopArenas();
+        if (cutScene.isPlaying == false)
+            cutScene.Play();
+    }
 
-}*/
+    public void stopCutscene()
+    {
+        cutScene.Stop();
+    }
+
+    public void playArenas()
+    {
+        stopCutscene();
+        stopMenuEnding();
+        if (arenas.isPlaying == false)
+            arenas.Play();
+    }
+
+    public void stopArenas()
+    {
+        arenas.Stop();
+    }
+}

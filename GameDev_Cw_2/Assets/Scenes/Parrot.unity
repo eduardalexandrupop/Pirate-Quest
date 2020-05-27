@@ -945,7 +945,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1069895240}
   - component: {fileID: 1069895239}
-  - component: {fileID: 1069895238}
   - component: {fileID: 1069895237}
   - component: {fileID: 1069895236}
   m_Layer: 0
@@ -1019,14 +1018,6 @@ MonoBehaviour:
   choice1: 
   choice2: 
   nextSceneName: AntIsland
---- !u!81 &1069895238
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069895235}
-  m_Enabled: 1
 --- !u!20 &1069895239
 Camera:
   m_ObjectHideFlags: 0

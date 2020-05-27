@@ -1005,7 +1005,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1624789342}
   - component: {fileID: 1624789341}
-  - component: {fileID: 1624789340}
   - component: {fileID: 1624789339}
   - component: {fileID: 1624789338}
   m_Layer: 0
@@ -1087,14 +1086,6 @@ MonoBehaviour:
   choice1: 
   choice2: 
   nextSceneName: BeeIsland
---- !u!81 &1624789340
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624789337}
-  m_Enabled: 1
 --- !u!20 &1624789341
 Camera:
   m_ObjectHideFlags: 0

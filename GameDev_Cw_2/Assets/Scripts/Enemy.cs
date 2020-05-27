@@ -42,8 +42,8 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator damaged()
     {
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+        gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
         yield return new WaitForSeconds(0.2f);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
+        gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
     }
 }

@@ -695,7 +695,6 @@ GameObject:
   m_Component:
   - component: {fileID: 991186288}
   - component: {fileID: 991186287}
-  - component: {fileID: 991186286}
   - component: {fileID: 991186285}
   - component: {fileID: 991186284}
   m_Layer: 0
@@ -765,14 +764,6 @@ MonoBehaviour:
   choice1: 
   choice2: 
   nextSceneName: DuckIsland
---- !u!81 &991186286
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991186283}
-  m_Enabled: 1
 --- !u!20 &991186287
 Camera:
   m_ObjectHideFlags: 0

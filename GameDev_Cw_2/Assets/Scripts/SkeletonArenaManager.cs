@@ -60,6 +60,8 @@ public class SkeletonArenaManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.instance.playArenas();
+
         if (StoryManager.selectedWeapon.Equals("sword"))
             playerInstance = Instantiate(swordPlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         else if (StoryManager.selectedWeapon.Equals("gun"))

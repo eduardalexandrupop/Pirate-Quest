@@ -252,7 +252,6 @@ GameObject:
   m_Component:
   - component: {fileID: 224031768}
   - component: {fileID: 224031767}
-  - component: {fileID: 224031766}
   - component: {fileID: 224031765}
   - component: {fileID: 224031764}
   m_Layer: 0
@@ -347,14 +346,6 @@ MonoBehaviour:
   choice1: 
   choice2: 
   nextSceneName: WeaponSelection
---- !u!81 &224031766
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224031763}
-  m_Enabled: 1
 --- !u!20 &224031767
 Camera:
   m_ObjectHideFlags: 0

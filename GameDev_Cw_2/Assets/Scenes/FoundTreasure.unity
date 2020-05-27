@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 66988225}
   - component: {fileID: 66988224}
-  - component: {fileID: 66988223}
   - component: {fileID: 66988222}
   - component: {fileID: 66988221}
   m_Layer: 0
@@ -203,14 +202,6 @@ MonoBehaviour:
   choice1: Assassinate Blackbeard
   choice2: Thank him for saving you
   nextSceneName: 
---- !u!81 &66988223
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66988220}
-  m_Enabled: 1
 --- !u!20 &66988224
 Camera:
   m_ObjectHideFlags: 0

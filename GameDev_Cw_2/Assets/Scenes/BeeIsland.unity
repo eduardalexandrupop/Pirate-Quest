@@ -1168,7 +1168,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1297911559}
   - component: {fileID: 1297911558}
-  - component: {fileID: 1297911557}
   - component: {fileID: 1297911556}
   - component: {fileID: 1297911555}
   m_Layer: 0
@@ -1241,14 +1240,6 @@ MonoBehaviour:
   choice1: Steal the honey
   choice2: Leave the hive
   nextSceneName: BoatPirateArena
---- !u!81 &1297911557
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297911554}
-  m_Enabled: 1
 --- !u!20 &1297911558
 Camera:
   m_ObjectHideFlags: 0

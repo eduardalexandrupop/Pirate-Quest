@@ -1172,7 +1172,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1962122658}
   - component: {fileID: 1962122657}
-  - component: {fileID: 1962122656}
   - component: {fileID: 1962122655}
   - component: {fileID: 1962122654}
   m_Layer: 0
@@ -1237,14 +1236,6 @@ MonoBehaviour:
   choice1: Start hunting
   choice2: Leave the lake
   nextSceneName: RangedPirateArena
---- !u!81 &1962122656
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962122653}
-  m_Enabled: 1
 --- !u!20 &1962122657
 Camera:
   m_ObjectHideFlags: 0

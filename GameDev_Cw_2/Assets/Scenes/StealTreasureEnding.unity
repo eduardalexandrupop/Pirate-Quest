@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 74442071}
   - component: {fileID: 74442070}
-  - component: {fileID: 74442069}
   - component: {fileID: 74442068}
   - component: {fileID: 74442067}
   m_Layer: 0
@@ -196,14 +195,6 @@ MonoBehaviour:
   choice1: 
   choice2: 
   nextSceneName: TitleScreen
---- !u!81 &74442069
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74442066}
-  m_Enabled: 1
 --- !u!20 &74442070
 Camera:
   m_ObjectHideFlags: 0

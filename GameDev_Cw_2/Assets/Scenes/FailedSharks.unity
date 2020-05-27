@@ -901,7 +901,6 @@ GameObject:
   m_Component:
   - component: {fileID: 823999653}
   - component: {fileID: 823999652}
-  - component: {fileID: 823999651}
   - component: {fileID: 823999650}
   - component: {fileID: 823999649}
   m_Layer: 0
@@ -961,14 +960,6 @@ MonoBehaviour:
   choice1: Confront Blackbeard
   choice2: Sail away
   nextSceneName: 
---- !u!81 &823999651
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823999648}
-  m_Enabled: 1
 --- !u!20 &823999652
 Camera:
   m_ObjectHideFlags: 0

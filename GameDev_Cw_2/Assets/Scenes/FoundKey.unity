@@ -1246,7 +1246,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1948558428}
   - component: {fileID: 1948558427}
-  - component: {fileID: 1948558426}
   - component: {fileID: 1948558425}
   - component: {fileID: 1948558424}
   m_Layer: 0
@@ -1318,14 +1317,6 @@ MonoBehaviour:
   choice1: 
   choice2: 
   nextSceneName: BlackbeardArena
---- !u!81 &1948558426
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948558423}
-  m_Enabled: 1
 --- !u!20 &1948558427
 Camera:
   m_ObjectHideFlags: 0
