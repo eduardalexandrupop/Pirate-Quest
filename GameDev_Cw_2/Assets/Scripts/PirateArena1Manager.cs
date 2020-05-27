@@ -26,7 +26,7 @@ public class PirateArena1Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerInstance = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        playerInstance = Instantiate(playerPrefab, new Vector3(-1, 0, 0), Quaternion.identity);
         playerInstance.GetComponent<PlayerAttack>().attackBar = attackBar;
         playerInstance.GetComponent<Player>().lives = lives;
 

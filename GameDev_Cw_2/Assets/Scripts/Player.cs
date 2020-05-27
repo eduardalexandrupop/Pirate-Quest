@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
 
     public void loseHealth()
     {
+        StartCoroutine(damaged());
         health--;
         foreach (Image i in lives)
             i.enabled = false;
@@ -31,5 +32,12 @@ public class Player : MonoBehaviour
         {
             StoryManager.failChallenge();
         }
+    }
+
+    private IEnumerator damaged()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(255,0,0);
+        yield return new WaitForSeconds(0.2f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
     }
 }

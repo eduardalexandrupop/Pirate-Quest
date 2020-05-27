@@ -79,7 +79,7 @@ public class DucksArenaManager : MonoBehaviour
         if (timer < 0)
         {
             timer = 0;
-            if (ducksHunted < 8)
+            if (ducksHunted < 6)
                 StoryManager.failChallenge();
             else
                 SceneManager.LoadScene("CompleteChallenge");
@@ -129,7 +129,7 @@ public class DucksArenaManager : MonoBehaviour
 
     void displayCounter()
     {
-        counterText.text = ducksHunted.ToString() + "/8";
+        counterText.text = ducksHunted.ToString() + "/6";
     }
 
     public static void huntDuck()

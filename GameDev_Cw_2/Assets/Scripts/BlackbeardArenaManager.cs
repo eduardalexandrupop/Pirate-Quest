@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class BlackbeardArenaManager : MonoBehaviour
 {
+    public Sprite swordNormal;
+    public Sprite gunNormal;
+    public Sprite boatNormal;
+    public Sprite swordSpecial;
+    public Sprite gunSpecial;
+    public Sprite boatSpecial;
+
     public GameObject swordPlayerPrefab;
     public GameObject gunPlayerPrefab;
     public GameObject boatPlayerPrefab;
@@ -15,6 +22,7 @@ public class BlackbeardArenaManager : MonoBehaviour
     public GameObject boatPiratePrefab;
 
     public Image attackBar;
+    public Image attackImage;
     public Image specialAttackBar;
     public Image specialAttackImage;
     public Image[] lives;
@@ -68,6 +76,22 @@ public class BlackbeardArenaManager : MonoBehaviour
             playerInstance.GetComponent<PlayerAttack>().setSpecialAttackUnlocked(false);
             specialAttackBar.gameObject.SetActive(false);
             specialAttackImage.gameObject.SetActive(false);
+        }
+
+        if (StoryManager.selectedWeapon == "sword")
+        {
+            attackImage.sprite = swordNormal;
+            specialAttackImage.sprite = swordSpecial;
+        }
+        else if (StoryManager.selectedWeapon == "gun")
+        {
+            attackImage.sprite = gunNormal;
+            specialAttackImage.sprite = gunSpecial;
+        }
+        else if (StoryManager.selectedWeapon == "boat")
+        {
+            attackImage.sprite = boatNormal;
+            specialAttackImage.sprite = boatSpecial;
         }
 
         if (StoryManager.unlockedBees == false)
