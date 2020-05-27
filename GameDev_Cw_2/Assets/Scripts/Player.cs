@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public void loseHealth()
     {
         StartCoroutine(damaged());
+
         health--;
         foreach (Image i in lives)
             i.enabled = false;

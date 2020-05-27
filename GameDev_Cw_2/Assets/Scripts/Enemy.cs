@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour
 
     public void loseHealth(int lostAmount)
     {
+        StartCoroutine(damaged());
+
         health -= lostAmount;
         if (health <= 0)
         {
@@ -36,5 +38,12 @@ public class Enemy : MonoBehaviour
     public int getHealth()
     {
         return health;
+    }
+
+    private IEnumerator damaged()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
+        yield return new WaitForSeconds(0.2f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
     }
 }

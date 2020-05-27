@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\Sand.cs" />
      <Compile Include="Assets\Scripts\SharkArenaManager.cs" />
      <Compile Include="Assets\Scripts\SkeletonArenaManager.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\SpriteManager.cs" />
      <Compile Include="Assets\Scripts\StoryManager.cs" />
      <Compile Include="Assets\Scripts\TitleScreenController.cs" />
