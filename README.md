@@ -7,7 +7,7 @@ You are an apprentice pirate seeking fortune and fame then one day the most impo
 - Handmade graphics.
 - Top-down adventure games with multiple minigames.
 
-## Usage
+## Installation and Usage
 This is a Unity project, in order to edit it, you will need a newer version of Unity.
 For the game itself please visit [itch.io](https://eduardalexandrupop.itch.io/pirate-quest).
 
